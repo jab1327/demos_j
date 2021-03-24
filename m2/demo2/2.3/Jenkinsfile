@@ -8,6 +8,7 @@ pipeline {
         stage('Build') {
             environment{
                 LOG_LEVEL='INFO'
+            }
              parallel {
                stage('machine1') {
                  steps{
@@ -24,8 +25,8 @@ pipeline {
                    echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}
                  }
                }
-        }
-        
+           }
+         }
         stage('Test') {
             steps {
                 echo "Testing. I can see release ${RELEASE}..."
@@ -41,7 +42,7 @@ pipeline {
           }
          }
         steps {
-          echo "Deplying release ${RELEASE}} to environment ${TARGET_ENVIRONMENT}"
+          echo "Deplying release ${RELEASE} to environment ${TARGET_ENVIRONMENT}"
         }
       }
     }
