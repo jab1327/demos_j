@@ -12,17 +12,17 @@ pipeline {
              parallel {
                stage('machine1') {
                  steps{
-                   echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}
+                   echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}"
                  }
                }
                stage('machine2') {
                  steps{
-                   echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}
+                   echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}"
                  }
                }
                stage('machine3') {
                  steps{
-                   echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}
+                   echo "Building release ${RELEASE} for ${STAGE_NAME} with log level ${LOG_LEVEL}"
                  }
                }
            }
